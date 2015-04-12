@@ -15,7 +15,7 @@ complete_dataset <- na.omit(data)
 # Selection based on given date
 required_data <- complete_dataset[as.Date(complete_dataset$DateTime) =="2007-02-01"|as.Date(complete_dataset$DateTime)=="2007-02-02",]
 
-# Plot the graph
+# Plot the graphs
 plot(required_data$DateTime, required_data$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
 lines(required_data$DateTime, required_data$Sub_metering_2, type="l", xlab="", ylab="Energy sub metering", col="red")
 lines(required_data$DateTime, required_data$Sub_metering_3, type="l", xlab="", ylab="Energy sub metering", col="blue")

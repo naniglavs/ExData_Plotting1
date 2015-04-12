@@ -2,7 +2,7 @@
 
 # Read the file using read.csv() function
 
-# add na.string = "?" to convert ? to NA
+# add na.string = "?" to convert ? to Not available
 data <- read.csv("household_power_consumption.txt", header = TRUE, na.strings = "?", sep = ";" , dec = ".")
 
 # merge & convert Data & Time columns in POXIXLt format & add as column
@@ -16,7 +16,7 @@ complete_dataset <- na.omit(data)
 # Selection based on given date
 required_data <- complete_dataset[as.Date(complete_dataset$DateTime) == "2007-02-01" | as.Date(complete_dataset$DateTime) == "2007-02-02", ]
 
-# Plot the histogram
+# Plot the histogram 
 hist(x=required_data$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red")
 
 # Save the output as png file giving the required dimensions

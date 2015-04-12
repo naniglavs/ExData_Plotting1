@@ -18,6 +18,6 @@ required_data <- complete_dataset[as.Date(complete_dataset$DateTime) == "2007-02
 plot(required_data$DateTime, required_data$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 
 # Save the output as png file with required dimensions
-# Close the devise
+# Close the device
 dev.print(png, file='plot2.png', width = 480, height=480)
 dev.off()

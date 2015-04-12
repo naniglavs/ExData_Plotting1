@@ -10,7 +10,7 @@ combine_DateTime <- paste(dataset$Date, dataset$Time)
 Formated_DateTime <- strptime(combine_DateTime, "%d/%m/%Y %H:%M:%S")
 dataset$DateTime <- Formated_DateTime
 
-# Remove all NAs
+# Remove all NA
 complete_dataset <- na.omit(dataset)
 
 # Selection based on given date
